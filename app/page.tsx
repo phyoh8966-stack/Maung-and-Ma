@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAF7F2] text-stone-800 selection:bg-rose-100">
       <Hero />
-      <CountdownTimer />
+      <CountdownTimer date="2026-12-25T09:00:00" />
       <InvitationCard />
       <Timeline />
       <Venue />
