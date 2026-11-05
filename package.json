@@ -1,6 +1,6 @@
 {
-  "name": "phyo-eaint-wedding-invitation",
-  "version": "1.0.0",
+  "name": "phyo-phyo-wedding-invitation",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

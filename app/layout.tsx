@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thein-and-nan.vercel.app"),
-  title: "Thein Aye Maung & Nan Su Myat Htwe - Wedding Invitation",
+  title: " Maung & Ma - Wedding Invitation",
   description: "ဖိတ်ကြားလွှာ - Thein Aye Maung & Nan Su Myat Htwe တို့၏ မင်္ဂလာဧည့်ခံပွဲ",
   openGraph: {
     title: "Thein Aye Maung & Nan Su Myat Htwe - Wedding Invitation",

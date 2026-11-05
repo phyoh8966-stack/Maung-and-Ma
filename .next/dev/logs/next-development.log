@@ -1,15 +1,2 @@
-{"timestamp":"00:00:01.491","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:02:26.114","source":"Server","level":"LOG","message":"  Turbopack has seen frequent file updates and is waiting for the filesystem to settle (0.5s elapsed so far; last modified: \"\\\\\\\\?\\\\C:\\\\Users\\\\Lenovo\\\\Documents\\\\RSVP Thein Aye Maung\\\\node_modules\\\\@opentelemetry\\\\api\\\\build\\\\esm\\\\diag\")."}
-{"timestamp":"00:02:28.599","source":"Server","level":"LOG","message":"○ Compiling / ..."}
-{"timestamp":"00:02:31.310","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:02:32.456","source":"Browser","level":"ERROR","message":"Firebase read error: Error: permission_denied at /event2_wishes: Client doesn't have permission to access the desired data. (components/RSVP.tsx:38:17)"}
-{"timestamp":"00:02:32.456","source":"Server","level":"ERROR","message":"[browser] \"Firebase read error:\" \"\\u001b[31mError: permission_denied at /event2_wishes: Client doesn't have permission to access the desired data.\\u001b[39m\" \"\\u001b[2m(components/RSVP.tsx:38:17)\\u001b[22m\""}
-{"timestamp":"00:03:40.243","source":"Browser","level":"WARN","message":"[2026-11-05T06:40:47.643Z]  @firebase/database: FIREBASE WARNING: set at /event2_rsvps/-P5bJmPjgedIfxzvdK_p failed: permission_denied "}
-{"timestamp":"00:03:40.296","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33m[2026-11-05T06:40:47.643Z]  @firebase/database:\\u001b[39m\" \"\\u001b[33mFIREBASE WARNING: set at /event2_rsvps/-P5bJmPjgedIfxzvdK_p failed: permission_denied \\u001b[39m\""}
-{"timestamp":"00:03:40.301","source":"Browser","level":"ERROR","message":"Firebase write error: Error: PERMISSION_DENIED: Permission denied (components/RSVP.tsx:85:15)"}
-{"timestamp":"00:03:40.301","source":"Server","level":"ERROR","message":"[browser] \"Firebase write error:\" \"\\u001b[31mError: PERMISSION_DENIED: Permission denied\\u001b[39m\" \"\\u001b[2m(components/RSVP.tsx:85:15)\\u001b[22m\""}
-{"timestamp":"00:03:49.295","source":"Browser","level":"WARN","message":"[2026-11-05T06:40:56.693Z]  @firebase/database: FIREBASE WARNING: set at /event2_rsvps/-P5bJocRfupDck7XlOVQ failed: permission_denied "}
-{"timestamp":"00:03:49.296","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33m[2026-11-05T06:40:56.693Z]  @firebase/database:\\u001b[39m\" \"\\u001b[33mFIREBASE WARNING: set at /event2_rsvps/-P5bJocRfupDck7XlOVQ failed: permission_denied \\u001b[39m\""}
-{"timestamp":"00:03:49.296","source":"Browser","level":"ERROR","message":"Firebase write error: Error: PERMISSION_DENIED: Permission denied (components/RSVP.tsx:85:15)"}
-{"timestamp":"00:03:49.296","source":"Server","level":"ERROR","message":"[browser] \"Firebase write error:\" \"\\u001b[31mError: PERMISSION_DENIED: Permission denied\\u001b[39m\" \"\\u001b[2m(components/RSVP.tsx:85:15)\\u001b[22m\""}
-{"timestamp":"00:08:05.362","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:00.939","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:11.652","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

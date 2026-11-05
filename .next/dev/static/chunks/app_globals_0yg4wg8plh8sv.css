@@ -553,6 +553,10 @@ img, video {
   min-width: 5.4rem;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .max-w-5xl {
   max-width: 64rem;
 }
@@ -1473,9 +1477,19 @@ body {
   background-color: rgb(254 243 199 / var(--tw-bg-opacity, 1));
 }
 
+.selection\:bg-rose-100 ::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 228 230 / var(--tw-bg-opacity, 1));
+}
+
 .selection\:bg-amber-100::selection {
   --tw-bg-opacity: 1;
   background-color: rgb(254 243 199 / var(--tw-bg-opacity, 1));
+}
+
+.selection\:bg-rose-100::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 228 230 / var(--tw-bg-opacity, 1));
 }
 
 .last\:pb-0:last-child {
