@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thein-and-nan.vercel.app"),
+  metadataBase: new URL("https://Maung-and-Ma.vercel.app"),
   title: " Maung & Ma - Wedding Invitation",
   description: "ဖိတ်ကြားလွှာ - Thein Aye Maung & Nan Su Myat Htwe တို့၏ မင်္ဂလာဧည့်ခံပွဲ",
   openGraph: {
-    title: "Thein Aye Maung & Nan Su Myat Htwe - Wedding Invitation",
+    title: "Maung & Ma - Wedding Invitation",
     description: "၂၀၂၆ ခုနှစ်၊ ဒီဇင်ဘာလ ၅ ရက် (စနေနေ့)၊ နံနက် ၆:၀၀ - ၇:၀၀၊ မိုးနဲမြို့။",
-    url: "https://thein-and-nan.vercel.app",
-    siteName: "Thein Aye Maung & Nan Su Myat Htwe Wedding",
+    url: "https://Maung-and-Ma.vercel.app",
+    siteName: "Maung & Ma Wedding",
     images: [
       {
         url: "/wedding-share.jpg",
