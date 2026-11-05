@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
-import { Heart, Send, Users, MessageSquareQuote } from "lucide-react";
+import { Heart, Send, MessageSquareQuote } from "lucide-react";
 import { db } from "@/lib/firebase";
 import { ref, push, onValue, query, limitToLast } from "firebase/database";
 
@@ -20,16 +20,16 @@ export default function RSVP() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  // Firebase Realtime Database ထဲမှ ဆုတောင်းများကို စောင့်ကြည့်ဆွဲယူခြင်း
   useEffect(() => {
-    const wishesRef = query(ref(db, "wishes"), limitToLast(40));
+    // ပွဲအသစ်အတွက် path သီးသန့် ခွဲထားပါသည်
+    const wishesRef = query(ref(db, "event2_wishes"), limitToLast(40));
     const unsubscribe = onValue(
       wishesRef,
       (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          const loadedWishes: Wish[] = Object.values(data);
-          setWishes(loadedWishes.sort((a, b) => b.createdAt - a.createdAt));
+          const loaded: Wish[] = Object.values(data);
+          setWishes(loaded.sort((a, b) => b.createdAt - a.createdAt));
         } else {
           setWishes([]);
         }
@@ -56,8 +56,7 @@ export default function RSVP() {
     const phone = String(formData.get("phone") ?? "").trim();
 
     try {
-      // RSVP အပြည့်အစုံကို rsvps စာရင်းထဲသို့ သိမ်းဆည်းခြင်း
-      await push(ref(db, "rsvps"), {
+      await push(ref(db, "event2_rsvps"), {
         name,
         attendance,
         guests,
@@ -65,9 +64,8 @@ export default function RSVP() {
         submittedAt: new Date().toISOString(),
       });
 
-      // ဆုတောင်းစကား ရေးသားပါက လူတိုင်းမြင်နိုင်သော wishes စာရင်းထဲသို့ ထည့်ခြင်း
       if (wish) {
-        await push(ref(db, "wishes"), {
+        await push(ref(db, "event2_wishes"), {
           name,
           message: wish,
           attendance,
@@ -83,9 +81,9 @@ export default function RSVP() {
         origin: { y: 0.72 },
         colors: ["#D4AF37", "#F5EFEB", "#E6B9B2"],
       });
-    } catch (submitError) {
-      console.error("Firebase write error:", submitError);
-      setError("စာရင်းပေးပို့မှု မအောင်မြင်ပါ။ အင်တာနက်လိုင်း စစ်ဆေးပြီး ထပ်မံကြိုးစားပေးပါ။");
+    } catch (err) {
+      console.error("Firebase write error:", err);
+      setError("စာရင်းပေးပို့မှု မအောင်မြင်ပါ။ နောက်တစ်ကြိမ် ထပ်မံကြိုးစားပေးပါ။");
     } finally {
       setLoading(false);
     }
@@ -105,7 +103,6 @@ export default function RSVP() {
         </div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-10 items-start">
-          {/* ဘယ်ဘက် - RSVP Form */}
           <div className="rounded-3xl border border-stone-200/80 bg-white p-6 shadow-sm sm:p-8">
             <h3 className="text-lg font-bold text-stone-900 mb-1">
               တက်ရောက်မှု အတည်ပြုရန်
@@ -215,7 +212,6 @@ export default function RSVP() {
             </form>
           </div>
 
-          {/* ညာဘက် - လူတိုင်းမြင်ရမည့် Guest Wishes */}
           <div className="rounded-3xl border border-stone-200/80 bg-white p-6 shadow-sm sm:p-8 flex flex-col">
             <div className="flex items-center gap-2">
               <MessageSquareQuote size={20} className="text-amber-700" />
